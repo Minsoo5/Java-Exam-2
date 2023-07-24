@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Inventory {
 
-    private HashMap<String, Integer> inventory;
+    private HashMap<String, Integer> inventory = new HashMap<>();
     /**
      * @param strings list of strings to add / remove / fetch from
      */
