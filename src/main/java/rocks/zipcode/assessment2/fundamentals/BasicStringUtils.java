@@ -40,18 +40,22 @@ public class BasicStringUtils {
     public static String removeCharacters(String string, String charactersToRemove) {
         //Hello
         //lo
-        StringBuilder sb = new StringBuilder();
-        sb.append(string);
-        for (int i = 0; i < sb.length(); i++) {
-            for (int j = 0; j < charactersToRemove.length(); j++) {
-                if(sb.charAt(i) == charactersToRemove.charAt(j)) {
-                    sb.deleteCharAt(i);
+
+        StringBuilder baseString = new StringBuilder();
+        baseString.append(string, 0, string.length());
+
+        StringBuilder characters = new StringBuilder();
+        characters.append(charactersToRemove, 0, charactersToRemove.length());
+
+        for (int i = 0; i < baseString.length(); i++) {
+            for (int j = 0; j < characters.length(); j++) {
+                if (baseString.charAt(i) == characters.charAt(j)) {
+                    baseString.deleteCharAt(i);
+                    i=0;
                 }
             }
-
         }
-
-        return sb.toString();
+        return baseString.toString();
     }
 
     /**
