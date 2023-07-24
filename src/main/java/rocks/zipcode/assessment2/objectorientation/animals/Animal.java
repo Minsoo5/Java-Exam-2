@@ -7,7 +7,11 @@ import rocks.zipcode.assessment2.objectorientation.Person;
  * @author leon on 29/11/2018.
  * @ATTENTION_TO_STUDENTS - Ensure that you have completed the `Person` class before attempting this class.
  */
-public class Animal {
+public class Animal extends Woofer{
+
+    private Long id;
+    private Person owner = new Person();
+
     public Animal() {
     }
 
@@ -16,23 +20,27 @@ public class Animal {
      * @param owner - owner of animal
      */
     public Animal(Long id, Person owner) {
+        this.id = id;
+        this.owner = owner;
     }
 
     public Long getId() {
-        return null;
+        return this.id;
     }
 
     public void setId(Long id) {
+        this.id = id;
     }
 
     public Person getOwner() {
-        return null;
+        return this.owner;
     }
 
     public void setOwner(Person owner) {
+        this.owner = owner;
     }
 
     public Address getAddress() {
-        return null;
+        return this.owner.getAddress();
     }
 }
