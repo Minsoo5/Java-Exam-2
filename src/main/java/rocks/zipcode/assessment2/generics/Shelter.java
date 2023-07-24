@@ -21,6 +21,7 @@ public class Shelter<_> {
     }
 
     public void add(Object object) {
+
     }
 
     public Boolean contains(Object object) {
