@@ -38,19 +38,20 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        // Hammner
-        // am
-//        char empty;
-//        StringBuilder sb = new StringBuilder();
-//        for (int i = 0; i < string.length(); i++) {
-//            for (int j = 0; j < charactersToRemove.length(); j++) {
-//                if (string.charAt(i) == charactersToRemove.charAt(j)) {
-//
-//                }
-//            }
-//        }
+        //Hello
+        //lo
+        StringBuilder sb = new StringBuilder();
+        sb.append(string);
+        for (int i = 0; i < sb.length(); i++) {
+            for (int j = 0; j < charactersToRemove.length(); j++) {
+                if(sb.charAt(i) == charactersToRemove.charAt(j)) {
+                    sb.deleteCharAt(i);
+                }
+            }
 
-        return string;
+        }
+
+        return sb.toString();
     }
 
     /**
