@@ -51,9 +51,11 @@ public class Person {
     @Override
     public boolean equals(Object o) {
         o = (Person) o;
-        return (this.getId() == ((Person) o).getId() &&
+        if (this.getId() == ((Person) o).getId() &&
                 this.getAddress() == ((Person) o).getAddress() &&
-                this.getName() == ((Person) o).getName());
+                this.getName() == ((Person) o).getName()) {
+            return true;
+        } else return (this.getClass() == o.getClass());
     }
 
     @Override
