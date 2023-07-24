@@ -1,6 +1,4 @@
 package rocks.zipcode.assessment2.generics;
-
-
 import rocks.zipcode.assessment2.generics.ageable.Ageable;
 
 /**
@@ -11,19 +9,21 @@ import rocks.zipcode.assessment2.generics.ageable.Ageable;
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
 public class Shelter<_> extends Ageable {
-
-
+    Ageable creature;
 
 
     public Shelter() {
         throw new NullPointerException();
+    }
+    public Shelter(Ageable creature) {
+        this.creature = creature;
     }
 
     /**
      * @return the number of item in the shelter
      */
     public int size() {
-        return -1;
+        return 0;
     }
 
     public void add(Object object) {

@@ -29,7 +29,7 @@ public class Address {
     }
 
     public String getAddressLine1() {
-        return addressLine1;
+        return this.addressLine1;
     }
 
     public void setAddressLine1(String addressLine1) {
@@ -37,7 +37,7 @@ public class Address {
     }
 
     public String getAddressLine2() {
-        return addressLine2;
+        return this.addressLine2;
     }
 
     public void setAddressLine2(String addressLine2) {
@@ -45,7 +45,7 @@ public class Address {
     }
 
     public String getCity() {
-        return city;
+        return this.city;
     }
 
     public void setCity(String city) {
@@ -53,7 +53,7 @@ public class Address {
     }
 
     public String getState() {
-        return state;
+        return this.state;
     }
 
     public void setState(String state) {
@@ -61,7 +61,7 @@ public class Address {
     }
 
     public String getZipcode() {
-        return zipcode;
+        return this.zipcode;
     }
 
     public void setZipcode(String zipcode) {
