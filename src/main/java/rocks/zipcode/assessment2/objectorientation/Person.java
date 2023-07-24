@@ -25,7 +25,7 @@ public class Person {
     }
 
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -33,7 +33,7 @@ public class Person {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -41,7 +41,7 @@ public class Person {
     }
 
     public Address getAddress() {
-        return address;
+        return this.address;
     }
 
     public void setAddress(Address address) {
@@ -51,13 +51,10 @@ public class Person {
     @Override
     public boolean equals(Object o) {
         o = (Person) o;
-        return (this.getAddress() == ((Person) o).getAddress() &&
-                this.getId() == ((Person) o).getId() &&
+        return (this.getId() == ((Person) o).getId() &&
+                this.getAddress() == ((Person) o).getAddress() &&
                 this.getName() == ((Person) o).getName());
-
-
     }
-
 
     @Override
     public String toString() {

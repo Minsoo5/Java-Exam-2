@@ -4,8 +4,13 @@ public class PlayingGround {
 
     public static void main(String[] args) {
 
-        Person per = new Person();
-        System.out.println(per.toString());
+        Person per1 = new Person();
+        Person per2 = new Person();
+
+
+        System.out.println(per1.equals(per2));
+
+
 
     }
 }
