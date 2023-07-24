@@ -51,8 +51,9 @@ public class StringUtils {
      */
     public static Boolean isAlphaString(String string) {
         for (int i = 0; i < string.length(); i++) {
-            if (!Character.isLetter(string.charAt(i)))
+            if (!Character.isLetter(string.charAt(i)) && (string.charAt(i) != ' ')) {
                 return false;
+            }
         }
         return true;
     }
@@ -63,7 +64,7 @@ public class StringUtils {
      */
     public static Boolean isNumericString(String string) {
         for (int i = 0; i < string.length(); i++) {
-            if (!Character.isDigit(string.charAt(i)))
+            if (!Character.isDigit(string.charAt(i)) && (string.charAt(i) != ' '))
                 return false;
         }
         return true;
@@ -79,9 +80,10 @@ public class StringUtils {
 
             for (int i = 0; i < string.length(); i++) {
                 if (Character.isAlphabetic(string.charAt(i)) == false &&
-                        Character.isDigit(string.charAt(i))) {
+                        Character.isDigit(string.charAt(i)) == false &&
+                        string.charAt(i) != ' ') {
                     specialChar++;
-                } else specialChar = 0;
+                } else specialChar = specialChar;
             }
 
         }
