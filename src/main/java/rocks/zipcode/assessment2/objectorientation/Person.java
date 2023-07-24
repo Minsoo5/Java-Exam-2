@@ -6,9 +6,9 @@ package rocks.zipcode.assessment2.objectorientation;
  */
 public class Person {
 
-    private Long id = Long.MIN_VALUE;
-    private String name = "";
-    private Address address;
+    private Long id = Long.MAX_VALUE;
+    private String name = "PersonName";
+    private Address address =  new Address("line1","line2", "city","state","99999");
 
     /**
      * @param id - id of person
@@ -50,7 +50,13 @@ public class Person {
 
     @Override
     public boolean equals(Object o) {
-
-    return;
+    return (this == o);
     }
+
+//    @Override
+//    public String toString() {
+//        StringBuilder sb = new StringBuilder();
+//        sb.append("Person{id=-9223372036854775808, name='', address=Address{addressLine1='', addressLine2='', city='', state='', zipcode=''}}");
+//        return sb.toString();
+//    }
 }

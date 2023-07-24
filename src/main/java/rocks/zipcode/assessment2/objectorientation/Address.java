@@ -5,11 +5,11 @@ package rocks.zipcode.assessment2.objectorientation;
  */
 public class Address {
 
-    private String addressLine1;
-    private String addressLine2;
-    private String city;
-    private  String state;
-    private   String zipcode;
+    private String addressLine1 = "";
+    private String addressLine2 = "";
+    private String city = "";
+    private  String state = "";
+    private   String zipcode = "";
     public Address() {
     }
 
@@ -70,6 +70,22 @@ public class Address {
 
     @Override
     public boolean equals(Object o) {
-        return o == o;
+        o = (Address) o;
+        return (this.getAddressLine1() == ((Address) o).getAddressLine1() &&
+                this.getAddressLine2() == ((Address) o).getAddressLine2() &&
+                this.getCity() == ((Address) o).getCity() &&
+                this.getState() == ((Address) o).getState() &&
+                this.getZipcode() == ((Address) o).getZipcode());
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "addressLine1='" + addressLine1 + '\'' +
+                ", addressLine2='" + addressLine2 + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipcode='" + zipcode + '\'' +
+                '}';
     }
 }
