@@ -35,7 +35,11 @@ public class Inventory {
      * @param item - increment the number of this item in stock by 1
      */
     public void addItemToInventory(String item) {
-        this.inventory.put(item, inventory.get(item)+1);
+        if (!this.inventory.containsKey(item)) {
+            this.inventory.put(item, 1);
+        } else {
+            this.inventory.put(item, inventory.get(item) + 1);
+        }
     }
 
     /**
@@ -50,6 +54,14 @@ public class Inventory {
      * @return - return the number of items
      */
     public Integer getItemQuantity(String item) {
-        return this.inventory.get(item);
+        if (this.inventory.containsKey(item)) {
+            return this.inventory.get(item);
+        }
+        return 0;
     }
+
+
+
+
+
 }
