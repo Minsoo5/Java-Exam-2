@@ -40,15 +40,15 @@ public class BasicStringUtils {
     public static String removeCharacters(String string, String charactersToRemove) {
         // Hammner
         // am
-        char empty;
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < string.length(); i++) {
-            for (int j = 0; j < charactersToRemove.length(); j++) {
-                if (string.charAt(i) == charactersToRemove.charAt(j)) {
-
-                }
-            }
-        }
+//        char empty;
+//        StringBuilder sb = new StringBuilder();
+//        for (int i = 0; i < string.length(); i++) {
+//            for (int j = 0; j < charactersToRemove.length(); j++) {
+//                if (string.charAt(i) == charactersToRemove.charAt(j)) {
+//
+//                }
+//            }
+//        }
 
         return string;
     }
